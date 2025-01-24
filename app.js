@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -9,6 +10,7 @@ const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
 const expressSession = require('express-session');
 const upload = require('./config/multerconfig');
+const port=process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.json());
@@ -324,6 +326,6 @@ function isLoggedIn(req, res, next) {
     }
 }
 
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log('Server started on port 3000');
 });
