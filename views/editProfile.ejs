@@ -1,0 +1,96 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box">
+                <a href="javascript:history.back()">Back</a>
+            </div>
+            <div class="box1">
+                <h1>Edit Your Profile</h1>
+                <div class="card">
+                    <form action="/updateProfile/<%=user._id%>" method="post" enctype="multipart/form-data">
+                        <label for="">Select Profile Photo</label>
+                        <input type="file" name="image" id="" autocomplete="off">
+                        <label for="">Full Name</label>
+                        <input type="text" name="name" id="" value="<%=user.name%>" required>
+                        <label for="">Username</label>
+                        <input type="text" name="username" id="" value="<%=user.username%>" required>
+                        <label for="">Email</label>
+                        <input type="email" name="email" id="" value="<%=user.email%>" required>
+                        <label for="">Address</label>
+                        <input type="text" name="address" id="" value="<%= user.address ? user.address : '' %>" placeholder="<%= user.address ? '' : 'City, Country' %>">
+
+                        <input class="btn" type="submit" value="Update Profile">
+                    </form>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="codealpha">
+                    <img src="/images/uploads/codealpha.jpeg" alt="">
+                </div>
+                <div class="social-logo">
+                    <img src="/images/uploads/logo.png" alt="">
+                </div>
+                <h2>Together we will Shine!</h2>
+            </div>
+        </div>
+    </div>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box">
+                <a href="javascript:history.back()">Back</a>
+            </div>
+            <div class="box1">
+                <h1>Edit Your Profile</h1>
+                <div class="card">
+                    <form action="/updateProfile/<%=user._id%>" method="post" enctype="multipart/form-data">
+                        <label for="">Select Profile Photo</label>
+                        <input type="file" name="image" id="" autocomplete="off">
+                        <label for="">Full Name</label>
+                        <input type="text" name="name" id="" value="<%=user.name%>" required>
+                        <label for="">Username</label>
+                        <input type="text" name="username" id="" value="<%=user.username%>" required>
+                        <label for="">Email</label>
+                        <input type="email" name="email" id="" value="<%=user.email%>" required>
+                        <label for="">Address</label>
+                        <input type="text" name="address" id="" value="<%= user.address ? user.address : '' %>" placeholder="<%= user.address ? '' : 'City, Country' %>">
+
+                        <input class="btn" type="submit" value="Update Profile">
+                    </form>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="codealpha">
+                    <img src="/images/uploads/codealpha.jpeg" alt="">
+                </div>
+                <div class="social-logo">
+                    <img src="/images/uploads/logo.png" alt="">
+                </div>
+                <h2>Together we will Shine!</h2>
+            </div>
+        </div>
+    </div>
+</body>
+>>>>>>> 85bcc1d (changes for deployment)
+</html>

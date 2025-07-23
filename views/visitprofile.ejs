@@ -1,0 +1,368 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box1">
+                <a href="javascript:history.back()">Back</a>
+            </div>
+            <div class="box2">
+                <div class="profile">
+                    <div class="userinfo">
+                        <div class="image">
+                            <img src="/images/uploads/<%=user.profilepic%>" alt="">
+                        </div>
+                        <div class="usertxt">
+                            <h1>
+                                <%=user.name%>
+                            </h1>
+                            <h2 style="color: blue;">@<%=user.username%>
+                            </h2>
+                            <h2>
+                                <%=user.address%>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="foll">
+                        <div class="foll-options">
+                            <p>
+                                <%=user.posts.length%>
+                            </p>
+                            <p>Posts</p>
+                        </div>
+                        <div class="foll-options">
+                            <p>
+                                <%=user.followers.length%>
+                            </p>
+                            <p>Followers</p>
+                        </div>
+                        <div class="foll-options">
+                            <p>
+                                <%=user.following.length%>
+                            </p>
+                            <p>Following</p>
+                        </div>
+                    </div>
+                    <% if(loggeduser.email===user.email) { %>
+
+                        <% } else if (follower) { %>
+                            <div style="display: flex;">
+                                <div class="add">
+                                    <a href="/friends/followback/<%=user.id%>">Follow Back</a>
+                                </div>
+                                <div class="add">
+                                    <a href="/friends/remove/<%=user.id%>">Remove</a>
+                                </div>
+                            </div>
+                            <% } else if(following) { %>
+                                <div class="add">
+                                    <a href="/friends/Unfollow/<%=user.id%>">Unfollow</a>
+                                </div>
+                                <% } else{ %>
+                                    <div class="add">
+                                        <a href="/friends/follow/<%=user.id%>">Follow</a>
+                                    </div>
+                                    <% } %>
+                                        <div class="postcontainer">
+                                            <h1>Posts</h1>
+                                            <div class="posts">
+                                                <% if(user.posts.length> 0){ %>
+                                                    <% user.posts.sort((a, b)=> new Date(b.date) - new
+                                                        Date(a.date)).forEach(function(post){%>
+                                                        <div class="post" id="post-<%= post.id %>">
+                                                            <span>
+                                                                <p style="color: blue;">@<%= user.username %>
+                                                                </p>
+                                                                <% if(post.location){ %>
+                                                                    <p> is at <%= post.location %>
+                                                                    </p>
+                                                                    <% } %>
+                                                            </span>
+                                                            <p>
+                                                                <%= new Date(post.date).toLocaleDateString('en-US', {
+                                                                    year: 'numeric' , month: 'long' , day: 'numeric' })
+                                                                    %>
+                                                            </p>
+                                                            <h3>
+                                                                <%= post.content %>
+                                                            </h3>
+                                                            <% if(post.pic){ %>
+                                                                <div class="postimg">
+                                                                    <h3>
+                                                                        <%= post.caption %>
+                                                                    </h3>
+                                                                    <img src="/images/uploads/<%= post.pic %>" alt="">
+                                                                </div>
+                                                                <% } %>
+                                                                    <div class="options">
+                                                                        <a href="/posts/like/<%= post.id %>">
+                                                                            <% if (!post.likes.some(like => like._id.toString() === user._id.toString())) { %>
+                                                                                <i class="fa-regular fa-heart"></i>
+                                                                            <% } else { %>
+                                                                                <i style="color: red;" class="fa-solid fa-heart"></i>
+                                                                            <% } %>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="like">
+                                                                        <% if(post.likes.length> 1){ %>
+                                                                            <a href="#" class="like-link"
+                                                                                data-post-id="<%= post._id %>"
+                                                                                style="margin-left: 1rem;">
+                                                                                <%= post.likes.length %> Likes
+                                                                            </a>
+                                                                            <% } else if (post.likes.length===1) { %>
+                                                                                <a href="#" class="like-link"
+                                                                                    data-post-id="<%= post._id %>"
+                                                                                    style="margin-left: 1rem;">
+                                                                                    <%= post.likes.length %> Like
+                                                                                </a>
+                                                                                <% } %>
+                                                                                    <div id="likesPopup-<%= post._id %>"
+                                                                                        class="likes-popup">
+                                                                                        <div class="popup-content">
+                                                                                            <span
+                                                                                                class="close">&times;</span>
+                                                                                            <h2>Likes</h2>
+                                                                                            <ul>
+                                                                                                <%
+                                                                                                    post.likes.forEach(user=>
+                                                                                                    { %>
+                                                                                                    <div
+                                                                                                        class="like-info">
+                                                                                                        <div
+                                                                                                            class="img">
+                                                                                                            <img src="/images/uploads/<%=user.profilepic%>"
+                                                                                                                alt="">
+                                                                                                        </div>
+                                                                                                        <a
+                                                                                                            href="/friends/visitprofile/<%=user._id%>">
+                                                                                                            <%= user.username
+                                                                                                                %>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                    <% }) %>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                    </div>
+                                                        </div>
+                                                        <% }) %>
+                                                            <% } else { %>
+                                                                <h2 style="margin: 2rem;">No Posts Yet!</h2>
+                                                                <% } %>
+                                            </div>
+                                        </div>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="codealpha">
+                    <img src="/images/uploads/codealpha.jpeg" alt="">
+                </div>
+                <div class="social-logo">
+                    <img src="/images/uploads/logo.png" alt="">
+                </div>
+                <h2>Together we will Shine!</h2>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/javascripts/script.js"></script>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box1">
+                <a href="javascript:history.back()">Back</a>
+            </div>
+            <div class="box2">
+                <div class="profile">
+                    <div class="userinfo">
+                        <div class="image">
+                            <img src="/images/uploads/<%=user.profilepic%>" alt="">
+                        </div>
+                        <div class="usertxt">
+                            <h1>
+                                <%=user.name%>
+                            </h1>
+                            <h2 style="color: blue;">@<%=user.username%>
+                            </h2>
+                            <h2>
+                                <%=user.address%>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="foll">
+                        <div class="foll-options">
+                            <p>
+                                <%=user.posts.length%>
+                            </p>
+                            <p>Posts</p>
+                        </div>
+                        <div class="foll-options">
+                            <p>
+                                <%=user.followers.length%>
+                            </p>
+                            <p>Followers</p>
+                        </div>
+                        <div class="foll-options">
+                            <p>
+                                <%=user.following.length%>
+                            </p>
+                            <p>Following</p>
+                        </div>
+                    </div>
+                    <% if(loggeduser.email===user.email) { %>
+
+                        <% } else if (follower) { %>
+                            <div style="display: flex;">
+                                <div class="add">
+                                    <a href="/friends/followback/<%=user.id%>">Follow Back</a>
+                                </div>
+                                <div class="add">
+                                    <a href="/friends/remove/<%=user.id%>">Remove</a>
+                                </div>
+                            </div>
+                            <% } else if(following) { %>
+                                <div class="add">
+                                    <a href="/friends/Unfollow/<%=user.id%>">Unfollow</a>
+                                </div>
+                                <% } else{ %>
+                                    <div class="add">
+                                        <a href="/friends/follow/<%=user.id%>">Follow</a>
+                                    </div>
+                                    <% } %>
+                                        <div class="postcontainer">
+                                            <h1>Posts</h1>
+                                            <div class="posts">
+                                                <% if(user.posts.length> 0){ %>
+                                                    <% user.posts.sort((a, b)=> new Date(b.date) - new
+                                                        Date(a.date)).forEach(function(post){%>
+                                                        <div class="post" id="post-<%= post.id %>">
+                                                            <span>
+                                                                <p style="color: blue;">@<%= user.username %>
+                                                                </p>
+                                                                <% if(post.location){ %>
+                                                                    <p> is at <%= post.location %>
+                                                                    </p>
+                                                                    <% } %>
+                                                            </span>
+                                                            <p>
+                                                                <%= new Date(post.date).toLocaleDateString('en-US', {
+                                                                    year: 'numeric' , month: 'long' , day: 'numeric' })
+                                                                    %>
+                                                            </p>
+                                                            <h3>
+                                                                <%= post.content %>
+                                                            </h3>
+                                                            <% if(post.pic){ %>
+                                                                <div class="postimg">
+                                                                    <h3>
+                                                                        <%= post.caption %>
+                                                                    </h3>
+                                                                    <img src="/images/uploads/<%= post.pic %>" alt="">
+                                                                </div>
+                                                                <% } %>
+                                                                    <div class="options">
+                                                                        <a href="/posts/like/<%= post.id %>">
+                                                                            <% if (!post.likes.some(like => like._id.toString() === user._id.toString())) { %>
+                                                                                <i class="fa-regular fa-heart"></i>
+                                                                            <% } else { %>
+                                                                                <i style="color: red;" class="fa-solid fa-heart"></i>
+                                                                            <% } %>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="like">
+                                                                        <% if(post.likes.length> 1){ %>
+                                                                            <a href="#" class="like-link"
+                                                                                data-post-id="<%= post._id %>"
+                                                                                style="margin-left: 1rem;">
+                                                                                <%= post.likes.length %> Likes
+                                                                            </a>
+                                                                            <% } else if (post.likes.length===1) { %>
+                                                                                <a href="#" class="like-link"
+                                                                                    data-post-id="<%= post._id %>"
+                                                                                    style="margin-left: 1rem;">
+                                                                                    <%= post.likes.length %> Like
+                                                                                </a>
+                                                                                <% } %>
+                                                                                    <div id="likesPopup-<%= post._id %>"
+                                                                                        class="likes-popup">
+                                                                                        <div class="popup-content">
+                                                                                            <span
+                                                                                                class="close">&times;</span>
+                                                                                            <h2>Likes</h2>
+                                                                                            <ul>
+                                                                                                <%
+                                                                                                    post.likes.forEach(user=>
+                                                                                                    { %>
+                                                                                                    <div
+                                                                                                        class="like-info">
+                                                                                                        <div
+                                                                                                            class="img">
+                                                                                                            <img src="/images/uploads/<%=user.profilepic%>"
+                                                                                                                alt="">
+                                                                                                        </div>
+                                                                                                        <a
+                                                                                                            href="/friends/visitprofile/<%=user._id%>">
+                                                                                                            <%= user.username
+                                                                                                                %>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                    <% }) %>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                    </div>
+                                                        </div>
+                                                        <% }) %>
+                                                            <% } else { %>
+                                                                <h2 style="margin: 2rem;">No Posts Yet!</h2>
+                                                                <% } %>
+                                            </div>
+                                        </div>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="codealpha">
+                    <img src="/images/uploads/codealpha.jpeg" alt="">
+                </div>
+                <div class="social-logo">
+                    <img src="/images/uploads/logo.png" alt="">
+                </div>
+                <h2>Together we will Shine!</h2>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/javascripts/script.js"></script>
+
+>>>>>>> 85bcc1d (changes for deployment)
+</html>

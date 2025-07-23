@@ -1,0 +1,416 @@
+<<<<<<< HEAD
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.container {
+    background-color: white;
+    color: black;
+}
+
+.boxes {
+    display: flex;
+}
+
+.box {
+    margin: 3rem;
+}
+
+.box a {
+    background-color: rgba(255, 0, 0, 0.87);
+    border: 2px solid rgba(255, 0, 0, 0.87);
+    font-size: 2.5vmin;
+    padding: .7rem 2.5rem;
+    color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.box1 {
+    margin: auto;
+    height: 100vh;
+}
+
+.box1 h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 4vmin;
+}
+
+.card{
+    background-color: lightblue;
+    width: 25vw;
+    height: 75vh;
+    border-radius: 1rem;
+    box-shadow: 2px -1px 15px 10px black;
+    padding-top: 1rem;
+}
+
+.card label{
+    font-size: 2.3vmin;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+.card form input:nth-child(2){
+    width: 13vw;
+    margin-left: 1.5rem;
+    background-color: transparent;
+    border: none;
+}
+
+.card form input:nth-child(2)::-webkit-file-upload-button{
+    margin-top: .2rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 2px solid black;
+    margin-right: 1rem;
+}
+
+.card form input:nth-child(2)::-webkit-file-upload-button:hover{
+    background-color: rgb(172, 166, 166);
+    border: 2px solid black;
+}
+
+.card input{
+    display: block;
+    width: 20vw;
+    height: 5vh;
+    margin: .8rem auto;
+    border-radius: .7rem;
+    padding: .1rem 1rem;
+    font-size: 2vmin;
+    background-color: aliceblue;
+    border: 2px solid black;
+    outline: none;
+}
+
+#cap{
+    display: none;
+}
+
+#cap input{
+    width: 20vw;
+    height: 5vh;
+    margin: .8rem auto;
+    border-radius: .7rem;
+    padding: .1rem 1rem;
+    font-size: 2vmin;
+    background-color: aliceblue;
+    border: 2px solid black;
+    outline: none;
+}
+
+#content{
+    display: block;
+    width: 20vw;
+    height: 15vh;
+    margin: .8rem auto;
+    border-radius: .7rem;
+    padding: .5rem 1rem;
+    font-size: 2vmin;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    outline: none;
+    resize: none;
+    border: 2px solid black;
+}
+
+.card .btn{
+    margin: 3rem auto;
+    background-color: #0e2fe7;
+    color: white;
+    width: 15vw;
+    height: 6vh;
+    font-weight: bold;
+    font-size: 2vmin;
+    border: 2px solid#0e2fe7;
+    cursor: pointer;
+}
+
+.box2 {
+    background-color: #0064e0;
+    height: 100vh;
+    width: 40vw;
+    box-shadow: 7px 6px 5px 10px #0064e0;
+    text-align: center;
+}
+
+.codealpha {
+    margin-top: 5rem;
+}
+
+.codealpha img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.social-logo {
+    margin-top: 5rem;
+}
+
+.social-logo img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+    margin-left: 3rem;
+}
+
+.box2 img {
+    border-radius: 1rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        transform: rotate(-20deg);
+    }
+}
+
+.box2 h2 {
+    margin-top: 5rem;
+    font-style: normal;
+    font-size: 4vmin;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.success {
+    background-color: #ffeb3b;
+    color: black;
+    border: 1px solid #ffeb3b;
+=======
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.container {
+    background-color: white;
+    color: black;
+}
+
+.boxes {
+    display: flex;
+}
+
+.box {
+    margin: 3rem;
+}
+
+.box a {
+    background-color: rgba(255, 0, 0, 0.87);
+    border: 2px solid rgba(255, 0, 0, 0.87);
+    font-size: 2.5vmin;
+    padding: .7rem 2.5rem;
+    color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.box1 {
+    margin: auto;
+    height: 100vh;
+}
+
+.box1 h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 4vmin;
+}
+
+.card{
+    background-color: lightblue;
+    width: 25vw;
+    height: 75vh;
+    border-radius: 1rem;
+    box-shadow: 2px -1px 15px 10px black;
+    padding-top: 1rem;
+}
+
+.card label{
+    font-size: 2.3vmin;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+.card form input:nth-child(2){
+    width: 13vw;
+    margin-left: 1.5rem;
+    background-color: transparent;
+    border: none;
+}
+
+.card form input:nth-child(2)::-webkit-file-upload-button{
+    margin-top: .2rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 2px solid black;
+    margin-right: 1rem;
+}
+
+.card form input:nth-child(2)::-webkit-file-upload-button:hover{
+    background-color: rgb(172, 166, 166);
+    border: 2px solid black;
+}
+
+.card input{
+    display: block;
+    width: 20vw;
+    height: 5vh;
+    margin: .8rem auto;
+    border-radius: .7rem;
+    padding: .1rem 1rem;
+    font-size: 2vmin;
+    background-color: aliceblue;
+    border: 2px solid black;
+    outline: none;
+}
+
+#cap{
+    display: none;
+}
+
+#cap input{
+    width: 20vw;
+    height: 5vh;
+    margin: .8rem auto;
+    border-radius: .7rem;
+    padding: .1rem 1rem;
+    font-size: 2vmin;
+    background-color: aliceblue;
+    border: 2px solid black;
+    outline: none;
+}
+
+#content{
+    display: block;
+    width: 20vw;
+    height: 15vh;
+    margin: .8rem auto;
+    border-radius: .7rem;
+    padding: .5rem 1rem;
+    font-size: 2vmin;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    outline: none;
+    resize: none;
+    border: 2px solid black;
+}
+
+.card .btn{
+    margin: 3rem auto;
+    background-color: #0e2fe7;
+    color: white;
+    width: 15vw;
+    height: 6vh;
+    font-weight: bold;
+    font-size: 2vmin;
+    border: 2px solid#0e2fe7;
+    cursor: pointer;
+}
+
+.box2 {
+    background-color: #0064e0;
+    height: 100vh;
+    width: 40vw;
+    box-shadow: 7px 6px 5px 10px #0064e0;
+    text-align: center;
+}
+
+.codealpha {
+    margin-top: 5rem;
+}
+
+.codealpha img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.social-logo {
+    margin-top: 5rem;
+}
+
+.social-logo img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+    margin-left: 3rem;
+}
+
+.box2 img {
+    border-radius: 1rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        transform: rotate(-20deg);
+    }
+}
+
+.box2 h2 {
+    margin-top: 5rem;
+    font-style: normal;
+    font-size: 4vmin;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.success {
+    background-color: #ffeb3b;
+    color: black;
+    border: 1px solid #ffeb3b;
+>>>>>>> 85bcc1d (changes for deployment)
+}

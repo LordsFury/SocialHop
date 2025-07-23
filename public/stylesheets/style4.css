@@ -1,0 +1,379 @@
+<<<<<<< HEAD
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.container {
+    background-color: white;
+    color: black;
+}
+
+.boxes {
+    display: flex;
+}
+
+.box {
+    margin: 3rem;
+}
+
+.box a {
+    background-color: rgba(255, 0, 0, 0.87);
+    border: 2px solid rgba(255, 0, 0, 0.87);
+    font-size: 2.5vmin;
+    padding: .7rem 2.5rem;
+    color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.box1 {
+    margin: auto;
+    height: 100vh;
+}
+
+.box1 h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 4vmin;
+}
+
+.card {
+    background-color: lightgrey;
+    width: 25vw;
+    height: 65vh;
+    border-radius: 1rem;
+    box-shadow: 2px -1px 15px 10px black;
+    padding-top: 1rem;
+}
+
+.card label {
+    font-size: 2.3vmin;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+.card input {
+    display: block;
+    width: 20vw;
+    height: 5vh;
+    margin: 1rem auto;
+    border-radius: .7rem;
+    padding: .1rem 1rem;
+    font-size: 2vmin;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    outline: none;
+}
+
+.pass {
+    display: flex;
+    background-color: aliceblue;
+    width: 21.8vw;
+    border-radius: .7rem;
+    margin: 1rem 2.1rem;
+}
+
+.pass input {
+    margin: auto 0rem;
+}
+
+.pass button {
+    height: 3rem;
+    width: 3rem;
+    background-color: transparent;
+    border: 1px transparent;
+    margin-right: .5rem;
+    margin-top: .6rem;
+}
+
+.pass i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.card .btn {
+    margin: 7rem auto;
+    background-color: orangered;
+    width: 15vw;
+    height: 6vh;
+    font-weight: bold;
+    font-size: 2vmin;
+    border: 2px solid orangered;
+    cursor: pointer;
+    color: white;
+}
+
+.card .btn:hover {
+    background-color: orange;
+    border: 2px solid orange;
+    color: black;
+    transition: .4s;
+}
+
+.box2 {
+    background-color: #0064e0;
+    height: 100vh;
+    width: 40vw;
+    box-shadow: 7px 6px 5px 10px #0064e0;
+    text-align: center;
+}
+
+.codealpha {
+    margin-top: 5rem;
+}
+
+.codealpha img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.social-logo {
+    margin-top: 5rem;
+}
+
+.social-logo img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+    margin-left: 3rem;
+}
+
+.box2 img {
+    border-radius: 1rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        transform: rotate(-20deg);
+    }
+}
+
+.box2 h2 {
+    margin-top: 5rem;
+    font-style: normal;
+    font-size: 4vmin;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.success {
+    background-color: #ffeb3b;
+    color: black;
+    border: 1px solid #ffeb3b;
+}
+=======
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.container {
+    background-color: white;
+    color: black;
+}
+
+.boxes {
+    display: flex;
+}
+
+.box {
+    margin: 3rem;
+}
+
+.box a {
+    background-color: rgba(255, 0, 0, 0.87);
+    border: 2px solid rgba(255, 0, 0, 0.87);
+    font-size: 2.5vmin;
+    padding: .7rem 2.5rem;
+    color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.box1 {
+    margin: auto;
+    height: 100vh;
+}
+
+.box1 h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 4vmin;
+}
+
+.card {
+    background-color: lightgrey;
+    width: 25vw;
+    height: 65vh;
+    border-radius: 1rem;
+    box-shadow: 2px -1px 15px 10px black;
+    padding-top: 1rem;
+}
+
+.card label {
+    font-size: 2.3vmin;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+.card input {
+    display: block;
+    width: 20vw;
+    height: 5vh;
+    margin: 1rem auto;
+    border-radius: .7rem;
+    padding: .1rem 1rem;
+    font-size: 2vmin;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    outline: none;
+}
+
+.pass {
+    display: flex;
+    background-color: aliceblue;
+    width: 21.8vw;
+    border-radius: .7rem;
+    margin: 1rem 2.1rem;
+}
+
+.pass input {
+    margin: auto 0rem;
+}
+
+.pass button {
+    height: 3rem;
+    width: 3rem;
+    background-color: transparent;
+    border: 1px transparent;
+    margin-right: .5rem;
+    margin-top: .6rem;
+}
+
+.pass i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.card .btn {
+    margin: 7rem auto;
+    background-color: orangered;
+    width: 15vw;
+    height: 6vh;
+    font-weight: bold;
+    font-size: 2vmin;
+    border: 2px solid orangered;
+    cursor: pointer;
+    color: white;
+}
+
+.card .btn:hover {
+    background-color: orange;
+    border: 2px solid orange;
+    color: black;
+    transition: .4s;
+}
+
+.box2 {
+    background-color: #0064e0;
+    height: 100vh;
+    width: 40vw;
+    box-shadow: 7px 6px 5px 10px #0064e0;
+    text-align: center;
+}
+
+.codealpha {
+    margin-top: 5rem;
+}
+
+.codealpha img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.social-logo {
+    margin-top: 5rem;
+}
+
+.social-logo img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+    margin-left: 3rem;
+}
+
+.box2 img {
+    border-radius: 1rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        transform: rotate(-20deg);
+    }
+}
+
+.box2 h2 {
+    margin-top: 5rem;
+    font-style: normal;
+    font-size: 4vmin;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.success {
+    background-color: #ffeb3b;
+    color: black;
+    border: 1px solid #ffeb3b;
+}
+>>>>>>> 85bcc1d (changes for deployment)
