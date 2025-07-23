@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,60 +52,4 @@
     </div>
 </body>
 <script src="/javascripts/script.js"></script>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/stylesheets/style5.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <% if (Message && Message.length > 0) { %>
-        <div id="popup" style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5);">
-            <div id="success-message" class="message success" style="padding:20px; border-radius:8px; width:300px; margin:50px auto; text-align:center;">
-                <%= Message %>
-            </div>
-        </div>
-    <% } %>
-    <div class="container">
-        <div class="boxes">
-            <div class="box">
-                <a href="javascript:history.back()">Back</a>
-            </div>
-            <div class="box1">
-                <h1>Create a Post</h1>
-                <div class="card">
-                    <form action="/home/addPost" method="post" enctype="multipart/form-data">
-                        <label for="">Select Photo to post</label>
-                        <input type="file" name="photo" id="img" autocomplete="off" onchange="showCaption()">
-                        <div id="cap">
-                            <label for="">Caption</label>
-                            <input type="text" name="caption" id="caption">
-                        </div>
-                        <label for="">Content</label>
-                        <textarea name="content" id="content" placeholder="What's on your Mind?"></textarea>
-                        <label for="">Location</label>
-                        <input type="text" name="location" id="" placeholder="Where are you?">
-                        <input class="btn" type="submit" value="Add Post">
-                    </form>
-                </div>
-            </div>
-            <div class="box2">
-                <div class="codealpha">
-                    <img src="/images/uploads/codealpha.jpeg" alt="">
-                </div>
-                <div class="social-logo">
-                    <img src="/images/uploads/logo.png" alt="">
-                </div>
-                <h2>Together we will Shine!</h2>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="/javascripts/script.js"></script>
->>>>>>> 85bcc1d (changes for deployment)
 </html>
